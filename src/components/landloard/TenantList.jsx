@@ -154,7 +154,7 @@ const people = [
       </div>
         </div>
 <div className="flex justify-center align-middle">
-<Pagination />
+<Pagination/>
 </div>
       </div>
       <Footer/>

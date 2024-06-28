@@ -1,94 +1,184 @@
 import Navbar from "./navbar"
 import Footer from "./footer"
-import Pagination from "./pagination"
+import Pagination from "./pagination.jsx"
 const people = [
     {
-      Name: 'Leslie 1',
-      Property: 'Property Name 1',
-      Landlord: 'Landloard Name 1',
-      Amount: '$ 2',
-      Details: "NA"
+      name: 'Leslie Alexander',
+      email: 'leslie.alexander@example.com',
+      role: 'Co-Founder / CEO',
+      amount:'$$$$',
+      imageUrl:
+        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      lastSeen: '3h ago',
+      lastSeenDateTime: '2023-01-23T13:23Z',
+      PropertyName: 'PropertyName1',
+      Type: 'Type1',
+      Condition: 'Pay'
     },
     {
-      Name: 'Leslie 2',
-      Property: 'Property Name 1',
-      Landlord: 'Landloard Name 1',
-      Amount: '$1',
-      Details: "NA"
+      name: 'Michael Foster',
+      email: 'leslie.alexander@example.com',
+      role: 'Co-Founder / CTO',
+      imageUrl:
+        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      lastSeen: '3h ago',
+      amount:'$$$$',
+      lastSeenDateTime: '2023-01-23T13:23Z',
+      PropertyName: 'PropertyName2',
+      Type: 'Type2',
+       Condition: 'Pay'
     },
     {
-      Name: 'Leslie 3',
-      Property: 'Property Name 1',
-      Landlord: 'Landloard Name 1',
-      Amount: '$2',
-      Details: "NA"
+      name: 'Dries Vincent',
+      email: 'leslie.alexander@example.com',
+      role: 'Business Relations',
+      amount:'$$$$',
+      imageUrl:
+        'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      lastSeen: null,
+      PropertyName: 'PropertyName3',
+      Type: 'Type3',
+       Condition: 'Pay'
     },
     {
-      Name: 'Leslie 4',
-      Property: 'Property Name 1',
-      Landlord: 'Landloard Name 1',
-      Amount: '$3',
-      Details: "NA"
+      name: 'Lindsay Walton',
+      email: 'leslie.alexander@example.com',
+      role: 'Front-end Developer',
+      amount:'$$$$',
+      imageUrl:
+        'https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      lastSeen: '3h ago',
+      lastSeenDateTime: '2023-01-23T13:23Z',
+      PropertyName: 'PropertyName4',
+      Type: 'Type4',
+       Condition: 'Pay'
     },
     {
-      Name: 'Leslie 5',
-      Property: 'Property Name 1',
-      Landlord: 'Landloard Name 1',
-      Amount: '$4 ',
-      Details: "NA"
+      name: 'Courtney Henry',
+      email: 'leslie.alexander@example.com',
+      role: 'Designer',
+      amount:'$$$$',
+      imageUrl:
+        'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      lastSeen: '3h ago',
+      lastSeenDateTime: '2023-01-23T13:23Z',
+      PropertyName: 'PropertyName5',
+      Type: 'Type5',
+      Condition: 'Pay'
     },
     {
-      Name: 'Leslie 6',
-      Property: 'Property Name 1',
-      Landlord: 'Landloard Name 1',
-      Amount: '$5',
-      Details: "NA"
+      name: 'Tom Cook',
+      email: 'leslie.alexander@example.com',
+      role: 'Director of Product',
+      amount:'$$$$',
+      imageUrl:
+        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      lastSeen: null,
+     PropertyName: 'PropertyName6',
+     Type: 'Type6',
+     Condition: 'Pay'
     },
- 
-   
   ]
   
-  export default function Payment() {
+  export default function PropertyTab() {
     return (
         <>
         <Navbar/>
-        <div>
-            <h2 className="flex justify-center align-middle text-emerald-600
-            m-8 py-4 font-extrabold border-b-8 border-t-8 border-emerald-600">
+        <div className="px-12 " style={{ backgroundColor: '#e1f4f5' }} >
+        <div  >
+            <h2 className="py-4 px-20 font-bold">
                 Payment Due
             </h2>
         </div>
-      <ul role="list" className="divide-y divide-gray-100">
+        <div>
+        <div className="ml-14 mr-14 grid grid-cols-1 sm:grid-cols-6 border-width rounded-xl" style={{ backgroundColor: '#1D5E6D' }}>
+       <div className="sm:col-span-4">
+       <ul role="list" className="divide-y divide-gray-100">
+          <li className="flex mt-4 justify-evenly gap-x-3">
+            <div className="flex gap-x-4 px-4 min-w-0">
+              <div className="min-w-0 flex-auto">
+                <p className="pb-2 text-sm font-semibold leading-6 text-white">Landlord Name</p>
+              </div>
+            </div>
+            <div className="flex min-w-0 gap-x-4 px-4">
+              <div className=" min-w-0 flex-auto">
+                <p className="ml-[170px] text-sm font-semibold leading-6 text-white">Property Name List</p>
+              </div>
+            </div>
+            <div className="flex min-w-0 gap-x-4  px-4">
+              <div className="min-w-0 flex-auto">
+                <p className=" text-sm font-semibold leading-6 text-white">Amount</p>
+              </div>
+            </div>
+           
+          </li>
+      </ul>
+       </div>
+       <div className="sm:col-span-2">
+       <ul role="list" className="">
+          <li className="flex mt-4 justify-evenly gap-x-3">
+       <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end  px-4">
+              <p className="text-sm font-semibold leading-6 text-white">Pay Rent</p>
+         
+             
+            </div>
+            </li>
+      
+      </ul>
+       </div>
+     
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-6 border-width bg-white ml-[60px] mr-[60px] rounded-xl mt-6">
+       <div className="sm:col-span-4 mb-4">
+       <ul role="list" className="divide-y divide-gray-100">
         {people.map((person) => (
           <li key={person.email} className="flex mt-10 justify-evenly gap-x-3">
             <div className="flex gap-x-4 px-4 min-w-0">
+              <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={person.imageUrl} alt="" />
               <div className="min-w-0 flex-auto">
-                <p className="text-sm font-semibold leading-6 text-gray-900">{person.Name}</p>
+                <p className="text-sm font-semibold leading-6 text-gray-900">{person.name}</p>
+                <p className="mt-1 truncate text-xs leading-5 text-gray-500">{person.email}</p>
               </div>
             </div>
-            <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end  px-4">
-              <p className="text-sm leading-6 text-gray-900">{person.Property}</p>
-      
+            <div className="flex min-w-0 gap-x-4 px-4">
+              <div className="min-w-0 flex-auto">
+                <p className="text-sm font-semibold leading-6 text-gray-900">{person.PropertyName}</p>
+              </div>
             </div>
-            <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end  px-4">
-              <p className="text-sm leading-6 text-gray-900">{person.Landlord}</p>
-
+            <div className="flex min-w-0 gap-x-2  px-4">
+              <div className="min-w-0 flex-auto">
+                <p className="text-sm font-semibold leading-6 text-gray-900">{person.amount}</p>
+              </div>
             </div>
-            <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end  px-4">
-              <p className="text-sm leading-6 text-gray-900">{person.Amount}</p>
-              <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            </div>
-            <button 
-                type="submit"
-                className="flex justify-center rounded-md bg-emerald-600 p-2 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-emerald-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emrald-500"
-              >
-             Pay Now
-              </button>
+           
           </li>
         ))}
       </ul>
-      <Pagination/>
+       </div>
+       <div className="sm:col-span-2">
+       <ul role="list" className="divide-y divide-gray-100">
+        {people.map((person) => (
+          <li key={person.email} className="flex mt-10 justify-evenly gap-x-3">
+       <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end  px-4 py-2.5 ">
+        <button className="bg-emerald-300 w-20 rounded-xl">
+        <p className="text-sm leading-6 text-gray-900">{person.Condition}</p>
+        </button>
+              
+             
+            </div>
+            </li>
+        ))}
+      </ul>
+       </div>
+     
+      </div>
+        </div>
+<div className="flex justify-center align-middle">
+<Pagination />
+</div>
+      </div>
       <Footer/>
+
       </>
     )
   }

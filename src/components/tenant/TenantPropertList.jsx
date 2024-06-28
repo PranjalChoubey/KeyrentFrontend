@@ -11,7 +11,7 @@ const people = [
       lastSeen: '3h ago',
       lastSeenDateTime: '2023-01-23T13:23Z',
       PropertyName: 'PropertyName1',
-      Type: 'Type1',
+      Type: 'Property Type1',
       Condition: 'Active'
     },
     {
@@ -23,7 +23,7 @@ const people = [
       lastSeen: '3h ago',
       lastSeenDateTime: '2023-01-23T13:23Z',
       PropertyName: 'PropertyName2',
-      Type: 'Type2',
+      Type: 'Property Type2',
        Condition: 'InActive'
     },
     {
@@ -33,8 +33,8 @@ const people = [
       imageUrl:
         'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
       lastSeen: null,
-      PropertyName: 'PropertyName3',
-      Type: 'Type3',
+      PropertyName: 'Person Name3',
+      Type: 'Property Type3',
        Condition: 'InDraft'
     },
     {
@@ -46,7 +46,7 @@ const people = [
       lastSeen: '3h ago',
       lastSeenDateTime: '2023-01-23T13:23Z',
       PropertyName: 'PropertyName4',
-      Type: 'Type4',
+      Type: 'Property Type4',
        Condition: 'Reactive'
     },
     {
@@ -58,7 +58,7 @@ const people = [
       lastSeen: '3h ago',
       lastSeenDateTime: '2023-01-23T13:23Z',
       PropertyName: 'PropertyName5',
-      Type: 'Type5',
+      Type: 'Property Type5',
       Condition: 'IsActive'
     },
     {
@@ -69,39 +69,39 @@ const people = [
         'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
       lastSeen: null,
      PropertyName: 'PropertyName6',
-     Type: 'Type6',
+     Type: 'Property Type6',
      Condition: 'Inactive'
     },
   ]
   
-  export default function PropertyTab() {
+  export default function TenantTab() {
     return (
         <>
         <Navbar/>
         <div className="px-12 " style={{ backgroundColor: '#e1f4f5' }} >
         <div  >
             <h2 className="py-4 px-20 font-bold">
-              Property List
+                Property List
             </h2>
         </div>
         <div>
         <div className="ml-14 mr-14 grid grid-cols-1 sm:grid-cols-6 border-width rounded-xl" style={{ backgroundColor: '#1D5E6D' }}>
        <div className="sm:col-span-4">
        <ul role="list" className="divide-y divide-gray-100">
-          <li className="flex mt-4 justify-evenly gap-x-3">
-            <div className="flex gap-x-4 px-4 min-w-0">
+          <li className="flex mt-4 justify-evenly ">
+            <div className="flex  min-w-0">
               <div className="min-w-0 flex-auto">
-                <p className="pb-2 text-sm font-semibold leading-6 text-white">Owner Name</p>
+                <p className="pb-2 pr-50 text-sm font-semibold leading-6 text-white">Propety Type</p>
               </div>
             </div>
             <div className="flex min-w-0 gap-x-4 px-4">
               <div className=" min-w-0 flex-auto">
-                <p className="ml-[180px] text-sm font-semibold leading-6 text-white">Property Type</p>
+                <p className=" ml-[30px] text-sm font-semibold leading-6 text-white">Property Name</p>
               </div>
             </div>
             <div className="flex min-w-0 gap-x-4  px-4">
               <div className="min-w-0 flex-auto">
-                <p className=" text-sm font-semibold leading-6 text-white">Tenant Name</p>
+                <p className=" text-sm font-semibold leading-6 text-white">Landlord Name</p>
               </div>
             </div>
            
@@ -128,10 +128,8 @@ const people = [
         {people.map((person) => (
           <li key={person.email} className="flex mt-10 justify-evenly gap-x-3">
             <div className="flex gap-x-4 px-4 min-w-0">
-              <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={person.imageUrl} alt="" />
               <div className="min-w-0 flex-auto">
-                <p className="text-sm font-semibold leading-6 text-gray-900">{person.name}</p>
-                <p className="mt-1 truncate text-xs leading-5 text-gray-500">{person.email}</p>
+                <p className="text-sm font-semibold leading-6 text-gray-900">{person.Type}</p>
               </div>
             </div>
             <div className="flex min-w-0 gap-x-4 px-4">
@@ -141,7 +139,7 @@ const people = [
             </div>
             <div className="flex min-w-0 gap-x-2  px-4">
               <div className="min-w-0 flex-auto">
-                <p className="text-sm font-semibold leading-6 text-gray-900">{person.Type}</p>
+                <p className="text-sm font-semibold leading-6 text-gray-900">{person.name}</p>
               </div>
             </div>
            
@@ -153,7 +151,7 @@ const people = [
        <ul role="list" className="divide-y divide-gray-100">
         {people.map((person) => (
           <li key={person.email} className="flex mt-10 justify-evenly gap-x-3">
-       <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end  px-4 py-2.5 ">
+       <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end  px-4 ">
         <button className="bg-emerald-300 w-20 rounded-xl">
         <p className="text-sm leading-6 text-gray-900">{person.Condition}</p>
         </button>

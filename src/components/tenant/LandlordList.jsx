@@ -12,7 +12,7 @@ const people = [
       lastSeenDateTime: '2023-01-23T13:23Z',
       PropertyName: 'PropertyName1',
       Type: 'Type1',
-      Condition: 'Active'
+      Condition: 'Send Query'
     },
     {
       name: 'Michael Foster',
@@ -24,7 +24,7 @@ const people = [
       lastSeenDateTime: '2023-01-23T13:23Z',
       PropertyName: 'PropertyName2',
       Type: 'Type2',
-       Condition: 'InActive'
+     Condition: 'Send Query'
     },
     {
       name: 'Dries Vincent',
@@ -35,7 +35,7 @@ const people = [
       lastSeen: null,
       PropertyName: 'PropertyName3',
       Type: 'Type3',
-       Condition: 'InDraft'
+       Condition: 'Send Query'
     },
     {
       name: 'Lindsay Walton',
@@ -47,7 +47,7 @@ const people = [
       lastSeenDateTime: '2023-01-23T13:23Z',
       PropertyName: 'PropertyName4',
       Type: 'Type4',
-       Condition: 'Reactive'
+        Condition: 'Send Query'
     },
     {
       name: 'Courtney Henry',
@@ -59,7 +59,7 @@ const people = [
       lastSeenDateTime: '2023-01-23T13:23Z',
       PropertyName: 'PropertyName5',
       Type: 'Type5',
-      Condition: 'IsActive'
+       Condition: 'Send Query'
     },
     {
       name: 'Tom Cook',
@@ -70,7 +70,7 @@ const people = [
       lastSeen: null,
      PropertyName: 'PropertyName6',
      Type: 'Type6',
-     Condition: 'Inactive'
+      Condition: 'Send Query'
     },
   ]
   
@@ -81,33 +81,38 @@ const people = [
         <div className="px-12 " style={{ backgroundColor: '#e1f4f5' }} >
         <div  >
             <h2 className="py-4 px-20 font-bold">
-                Property List
+                Landlord List
             </h2>
         </div>
         <div>
         <div className="ml-14 mr-14 grid grid-cols-1 sm:grid-cols-6 border-width rounded-xl" style={{ backgroundColor: '#1D5E6D' }}>
-       <div className="sm:col-span-1">
+       <div className="sm:col-span-4">
        <ul role="list" className="divide-y divide-gray-100">
           <li className="flex mt-4 justify-evenly gap-x-3">
             <div className="flex gap-x-4 px-4 min-w-0">
               <div className="min-w-0 flex-auto">
-                <p className="pb-2 text-sm font-semibold leading-6 text-white">Tenant Name</p>
+                <p className="pb-2 text-sm font-semibold leading-6 text-white">Landlord Name</p>
               </div>
             </div>
+            <div className="flex min-w-0 gap-x-4 px-4">
+              <div className=" min-w-0 flex-auto">
+                <p className="ml-[160px] text-sm font-semibold leading-6 text-white">Email Address</p>
+              </div>
+            </div>
+            <div className="flex min-w-0 gap-x-4  px-4">
+              <div className="min-w-0 flex-auto">
+                <p className=" text-sm font-semibold leading-6 ml-[100px] text-white">Contact Number</p>
+              </div>
+            </div>
+           
           </li>
       </ul>
        </div>
        <div className="sm:col-span-2">
-
-       </div>
-       <div className="sm:col-span-2">
-
-       </div>
-       <div className="sm:col-span-1">
        <ul role="list" className="">
           <li className="flex mt-4 justify-evenly gap-x-3">
        <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end  px-4">
-              <p className="text-sm font-semibold leading-6 text-white">Status</p>
+              <p className="text-sm font-semibold leading-6 text-white">Send Query</p>
          
              
             </div>
@@ -118,7 +123,7 @@ const people = [
      
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-6 border-width bg-white ml-[60px] mr-[60px] rounded-xl mt-6">
-       <div className="sm:col-span-1 mb-2">
+       <div className="sm:col-span-4 mb-4">
        <ul role="list" className="divide-y divide-gray-100">
         {people.map((person) => (
           <li key={person.email} className="flex mt-10 justify-evenly gap-x-3">
@@ -126,19 +131,25 @@ const people = [
               <img className="h-12 w-12 flex-none rounded-full bg-gray-50" src={person.imageUrl} alt="" />
               <div className="min-w-0 flex-auto">
                 <p className="text-sm font-semibold leading-6 text-gray-900">{person.name}</p>
-                <p className="mt-1 truncate text-xs leading-5 text-gray-500">{person.email}</p>
+                
               </div>
             </div>
-
+            <div className="flex min-w-0 gap-x-4 px-4">
+              <div className="min-w-0 flex-auto">
+              <p className="mt-1 truncate text-xs leading-5 text-gray-500">{person.email}</p>
+              </div>
+            </div>
+            <div className="flex min-w-0 gap-x-2  px-4">
+              <div className="min-w-0 flex-auto">
+                <p className="text-sm font-semibold leading-6 text-gray-900">{person.Type}</p>
+              </div>
+            </div>
            
           </li>
         ))}
       </ul>
        </div>
-       <div className="sm:col-span-4">
-
-       </div>
-       <div className="sm:col-span-1">
+       <div className="sm:col-span-2">
        <ul role="list" className="divide-y divide-gray-100">
         {people.map((person) => (
           <li key={person.email} className="flex mt-10 justify-evenly gap-x-3">
